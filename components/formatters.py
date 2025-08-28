@@ -1,4 +1,4 @@
-from typing import Callable, Dict, List, Any
+from typing import Any, Callable, Dict, List
 
 
 def format_for_tokenization(tokenizer) -> Callable:

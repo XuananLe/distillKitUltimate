@@ -1,8 +1,10 @@
-from typing import Dict, Any
+from typing import Any, Dict
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
+
 
 def KL_wo(y_s, y_t,T=1):
     p_s = F.log_softmax(y_s/T, dim=-1)

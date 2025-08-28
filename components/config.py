@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Any, Dict, Optional
 
 
 def load_config(config_path: Optional[str] = None) -> Dict[str, Any]:

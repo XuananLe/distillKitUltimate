@@ -1,9 +1,10 @@
-from typing import Dict, Any, Optional, Tuple, Union
+from typing import Any, Dict, Optional, Tuple, Union
+
 import torch
-from trl import SFTTrainer
-from transformers import PreTrainedModel
-from torch import Tensor
 import torch.nn.functional as F
+from torch import Tensor
+from transformers import PreTrainedModel
+from trl import SFTTrainer
 
 from components.loss import compute_distillation_loss
 

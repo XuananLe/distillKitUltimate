@@ -1,13 +1,15 @@
-import os
-import torch
 import argparse
-from tqdm import tqdm
+import os
+
 import tensorflow as tf
-from datasets import load_from_disk, load_dataset as hf_load_dataset
+import torch
+from datasets import load_dataset as hf_load_dataset
+from datasets import load_from_disk
+from tqdm import tqdm
 
 from components.config import load_config
 from components.formatters import get_formatter
-from components.models import setup_tokenizer, load_base_model, load_adapter
+from components.models import load_adapter, load_base_model, setup_tokenizer
 
 
 def generate_logits_for_batch(model, sequences, max_seq_len, tokenizer):

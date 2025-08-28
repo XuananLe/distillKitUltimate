@@ -1,9 +1,10 @@
-import modal
 import argparse
 from pathlib import Path
-from scripts.local.generate_logits import gen_logits
-from components.config import load_config
 
+import modal
+
+from components.config import load_config
+from scripts.local.generate_logits import gen_logits
 
 VOL_MOUNT_PATH = Path("/vol")
 output_vol = modal.Volume.from_name("distillation-volume", create_if_missing=True)
